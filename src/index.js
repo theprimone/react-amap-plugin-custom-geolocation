@@ -9,11 +9,14 @@ class Geolocation extends React.Component {
       } else {
         this.map = props.__map__;
         this.element = props.__ele__;
+        const { autoLocation } = props;
 
         this.resolveGeolocation(props).then(() => {
           this.triggerCreated(props);
           this.map.addControl(this.geolocation);
-          this.geolocation.getCurrentPosition();
+          if (autoLocation) {
+            this.geolocation.getCurrentPosition();
+          }
         });
       }
     }
@@ -23,19 +26,18 @@ class Geolocation extends React.Component {
     return false;
   }
 
-  resolveGeolocation(props){
+  resolveGeolocation(props) {
     if (this.geolocation) {
       return new Promise((resolve) => {
         resolve(this.geolocation);
       });
-    } else {
-      return new Promise((resolve) => {
-        this.map.plugin(['AMap.Geolocation'], () => {
-          this.geolocation = new window.AMap.Geolocation(props);
-          resolve(this.geolocation);
-        });
-      });
     }
+    return new Promise((resolve) => {
+      this.map.plugin(['AMap.Geolocation'], () => {
+        this.geolocation = new window.AMap.Geolocation(props);
+        resolve(this.geolocation);
+      });
+    });
   }
 
   triggerCreated(props) {
@@ -45,7 +47,7 @@ class Geolocation extends React.Component {
     }
   }
 
-  render(){
+  render() {
     return null;
   }
 }

@@ -7,6 +7,10 @@ Configurable props are
 + buttonOffset
 + ...
 
+New features
+
++ autoLocation
+
 Visit [AMap doc](http://lbs.amap.com/api/javascript-api/reference/location/#m_AMap.Geolocation) for details about **ALL** prop;
 
 

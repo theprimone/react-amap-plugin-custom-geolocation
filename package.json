@@ -1,17 +1,17 @@
 {
-  "name": "react-amap-plugin-geolocation",
-  "version": "0.0.2",
+  "name": "react-amap-plugin-custom-geolocation",
+  "version": "1.0.1",
   "description": "Geolocation plugin for react-amap",
   "main": "./lib/geolocation.min.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhengqingxin/react-amap-plugin-geolocation.git"
+    "url": "git+https://github.com/theprimone/react-amap-plugin-custom-geolocation.git"
   },
   "scripts": {
-    "build": "rm -rf lib && webpack && NODE_ENV=production webpack",
+    "build": "set NODE_ENV=production&& webpack",
     "prepublish": "npm run build"
   },
-  "author": "362965772@qq.com",
+  "author": "yuns.xie@qq.com",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.25.0",
