@@ -7,16 +7,16 @@ Configurable props are
 + buttonOffset
 + ...
 
-New features
+☁️ New features
 
 + autoLocation
 
 Visit [AMap doc](http://lbs.amap.com/api/javascript-api/reference/location/#m_AMap.Geolocation) for details about **ALL** prop;
 
 
-```
+```jsx
 import { Map } from 'react-amap';
-import Geolocation from 'react-amap-plugin-geolocation';
+import Geolocation from 'react-amap-plugin-custom-geolocation';
 
 
 const pluginProps = {
